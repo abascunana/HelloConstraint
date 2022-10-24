@@ -6,30 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical" >
-
-
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/countb"
-            android:layout_width="174dp"
-            android:layout_height="88dp"
+            android:layout_width="179dp"
+            android:layout_height="99dp"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
-            android:layout_marginBottom="451dp"
-            android:text="@string/count" />
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginBottom="14dp"
+            android:text="@string/count"
+            app:layout_constraintBottom_toTopOf="@+id/result"
+            app:layout_constraintStart_toStartOf="@+id/result"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/result"
             android:layout_width="102dp"
-            android:layout_height="343dp"
+            android:layout_height="0dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="135dp"
+            android:layout_marginBottom="203dp"
             android:background="#666f70"
             android:gravity="center"
             android:text="@string/res"
@@ -38,17 +44,23 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.885"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/countb"
+            app:layout_constraintVertical_bias="0.476" />
 
         <Button
             android:id="@+id/toastb"
-            android:layout_width="175dp"
-            android:layout_height="91dp"
+            android:layout_width="187dp"
+            android:layout_height="80dp"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
-            android:layout_marginBottom="594dp"
-            android:text="@string/toast" />
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="133dp"
+            android:text="@string/toast"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
