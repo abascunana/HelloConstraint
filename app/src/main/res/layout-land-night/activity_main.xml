@@ -6,51 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:gravity="center"
-        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/countb"
-            android:layout_width="218dp"
-            android:layout_height="85dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginBottom="220dp"
-            android:text="@string/count" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
 
         <TextView
             android:id="@+id/result"
-            android:layout_width="263dp"
-            android:layout_height="168dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="317dp"
+            android:layout_width="337dp"
+            android:layout_height="194dp"
+            android:layout_alignParentEnd="false"
             android:background="#666f70"
             android:gravity="center"
             android:text="@string/res"
             android:textColor="@color/white"
             android:textSize="100sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/countb"
+            app:layout_constraintEnd_toEndOf="@+id/countb"
+            app:layout_constraintStart_toStartOf="@+id/countb"
+            app:layout_constraintTop_toBottomOf="@+id/toastb" />
 
         <Button
             android:id="@+id/toastb"
-            android:layout_width="218dp"
-            android:layout_height="62dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginBottom="331dp"
-            android:text="@string/toast" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentEnd="false"
 
-    </RelativeLayout>
+            android:layout_marginTop="197dp"
+            android:layout_marginBottom="7dp"
+            android:gravity="center"
+            android:text="@string/toast"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/result"
+            app:layout_constraintEnd_toEndOf="@+id/result"
+            app:layout_constraintStart_toStartOf="@+id/result"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/countb"
+            android:layout_width="334dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="false"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="333dp"
+            android:layout_marginBottom="220dp"
+            android:text="@string/count"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
